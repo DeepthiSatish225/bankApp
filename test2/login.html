@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        .form-container input {
+            margin: 5px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+        }
+        .form-container button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Login</h1>
+    <div class="form-container">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Username" required><br>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Password" required><br>
+
+        <button onclick="loginUser()">Login</button>
+    </div>
+</div>
+
+<script>
+    function loginUser() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+
+        if (username === 'johndoe' && password === 'hashed_password') {
+            alert('Login successful!');
+            window.location.href = 'userPage.html';
+        } else {
+            alert('Invalid username or password');
+        }
+    }
+</script>
+
+</body>
+</html>
